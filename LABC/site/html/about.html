@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/master.css" media="screen" title="no title">
+    <link rel="stylesheet" href="../css/subcss.css" media="screen" title="no title">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<body>
+    <section class="main-section-title-2" id="main-section-title">
+        <nav>
+            <ul>
+                <a href="../index.html">
+                    <li>HOME</li>
+                </a>
+                <a href="documentation.html">
+                    <li>DOCUMENTATION</li>
+                </a>
+                <a href="about.html">
+                    <li>ABOUT</li>
+                </a>
+            </ul>
+        </nav>
+        <header id="main-title">
+            <h1>ABOUT</h1>
+        </header>
+    </section>
+    <section id="content">
+        <article class="main-section">
+            <h1><span class="sunderline">Why</span> use?</h1>
+            <p>
+                If you can build a website, you can build a desktop app. KICKGROW is a
+                <br />framework for creating native applications with web technologies like JavaScript,
+                <br />HTML, and CSS. It takes care of the hard parts so you can focus on the core of
+                <br />your application.
+            </p>
+            <span class="separate-line"></span>
+            <h1><span class="sunderline">What</span> is Node?</h1>
+            <p>
+                Node is similar in design to, and influenced by, systems like Ruby's Event
+                <br />Machine or Python's Twisted. Node takes the event model a bit further.
+                <br />It presents an event loop as a runtime construct instead of as a library.
+                <br />In other systems there is always a blocking call to start the event-loop.
+                <br />Typically behavior is defined through callbacks at the beginning of a script
+                <br />and at the end starts a server through a blocking call like EventMachine::run().
+                <br />In Node there is no such start-the-event-loop call. Node simply enters the event
+                <br />loop after executing the input script. Node exits the event loop when there are
+                <br /> no more callbacks to perform. This behavior is like browser JavaScript — the
+                <br /> event loop is hidden from the user.
+                <br /> HTTP is a first class citizen in Node, designed with streaming and low latency
+                <br /> in mind. This makes Node well suited for the foundation of a web library or framework.
+                <br /> Just because Node is designed without threads, doesn't mean you cannot take advantage
+                <br /> of multiple cores in your environment. Child processes can be spawned by using our
+                <br /> child_process.fork() API, and are designed to be easy to communicate with. Built upon
+                <br /> that same interface is the cluster module, which allows you to share sockets between
+                <br /> processes to enable load balancing over your cores.
+            </p>
+        </article>
+    </section>
+    <footer>
+        &copy; 2016
+        <br /> Igor Barbosa.
+        <section id="menus">
+            <nav class="menu-box">
+                <ul>
+                    <a href="#">
+                        <li>Home</li>
+                    </a>
+                    <a href="#">
+                        <li>Documentation</li>
+                    </a>
+                    <a href="#">
+                        <li>About</li>
+                    </a>
+                </ul>
+            </nav>
+            <nav class="menu-box">
+                <ul>
+                    <a href="#">
+                        <li>GitHub</li>
+                    </a>
+                    <a href="#">
+                        <li>Facebook</li>
+                    </a>
+                </ul>
+            </nav>
+            <nav class="menu-box">
+                <ul>
+                    <a href="#">
+                        <li>Team</li>
+                    </a>
+                    <a href="#">
+                        <li>Prices</li>
+                    </a>
+                    <a href="#">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </nav>
+        </section>
+    </footer>
+    <video src="../img/test.webm" poster="../img/test.webm" id="bgvid" playsinline autoplay muted loop>
+    <source src="../img/test.webm" type="video/webm">
+</body>
+
+</html>
