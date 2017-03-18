@@ -9,7 +9,6 @@ int main(int argc, char const *argv[])
   size_t size = 50;
   char * str = malloc(50 * sizeof(char));
 
-  // scanf("%s", str);
   getline(&str, &size, stdin);
 
   changeStr(str);
