@@ -1,0 +1,34 @@
+Algoritmo
+    Declare tests(3), i Numérico
+    Declare operation Literal
+
+    procedimento scanTeachersLog(CR tests() Numérico; CR operation Literal)
+        para i de 1 até 3 faça
+            Escreva "Test ", i, ": "
+            Leia tests(i)
+        fim_para
+        Escreva "Operation: "
+        Leia operation
+    fim_procedimento
+
+    procedimento makeOperation(tests() Numérico; operation Literal)
+        Declare avg Numérico    
+        avg := (tests(1) + tests(2) + tests(3)) / 3
+        se operation = "A" então
+            Escreva "AVG: ", avg
+            senão 
+                se avg < 4 então
+                    Escreva "Fail"
+                    senão se avg < 7 então 
+                        Escreva "Exam"
+                        senão 
+                            Escreva "Approved"
+                    fim_se
+                fim_se
+        fim_se 
+    fim_procedimento
+
+    scanTeachersLog(tests, operation)
+    makeOperation(tests, operation)
+
+fim_Algoritmo

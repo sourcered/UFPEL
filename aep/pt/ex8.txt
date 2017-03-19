@@ -1,7 +1,7 @@
 Algoritmo
     Declare matrix(10,10), i, j Numérico
     
-    procedimento generateMatrix10By10(matrix(,) Numérico)
+    procedimento generateMatrix10By10(CR matrix(,) Numérico)
         para i de 1 até 10 faça
             para j de 1 até 10 faça
                 se i = j então 

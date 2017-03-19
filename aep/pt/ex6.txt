@@ -1,7 +1,7 @@
     Algoritmo
         Declare matrix(4,4), row, column Numérico
 
-        procedimento readMatrix(matrix(,) Numérico)
+        procedimento readMatrix(CR matrix(,) Numérico)
             Declare i,j Numérico
             para i de 1 até 4 faça
                 para j de 1 até 4 faça

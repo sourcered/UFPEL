@@ -6,7 +6,7 @@ Algoritmo
     
     Declare equation Equation
 
-    procedimento printArrayFloat(v(), size Numérico)
+    procedimento printArrayFloat(CR v(), size Numérico)
         Declare i Numérico
         para i de 1 até size faça
             Escreva v(i), ' '
