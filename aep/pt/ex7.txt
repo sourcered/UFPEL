@@ -1,14 +1,14 @@
 Algoritmo
     Declare matrix(5,5), x Numérico
 
-    procedimento readMatrix(CR matrix(,) Numérico)
+    subrotina readMatrix(CR matrix(,) Numérico)
         Declare i, j Numérico
         para i de 1 até 5 faça
             para j de 1 até 5 faça
                 Leia matrix(i,j)
             fim_para  
         fim_para  
-    fim_procedimento
+    fim_subrotina
 
     função Numérico findValue(matrix(,), x Numérico)
         Declare i,j Numérico

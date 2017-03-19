@@ -1,21 +1,21 @@
 Algoritmo
     Declare v1(10), v2(10), v3(20) Numérico
     
-    procedimento printArray(array(), size Numérico)
+    subrotina printArray(array(), size Numérico)
         Declare i Numérico
         para i de 1 até size faça
             Escreva array(i), ' ' 
         fim_para
-    fim_procedimento
+    fim_subrotina
     
-    procedimento scanArray(CR array() Numérico)
+    subrotina scanArray(CR array() Numérico)
         Declare i Numérico
         para i de 1 até 10 faça
             leia array(i)
         fim_para 
-    fim_procedimento
+    fim_subrotina
     
-    procedimento sortArrayAsc(CR array() Numérico; size Numérico)
+    subrotina sortArrayAsc(CR array() Numérico; size Numérico)
         Declare i,j, tmp Numérico
         para i de 1 até size faça
             para j de i+1 até size faça
@@ -26,9 +26,9 @@ Algoritmo
                 fim_se
             fim_para
         fim_para
-    fim_procedimento
+    fim_subrotina
     
-    procedimento concatArray(CR v1(), v2(), v3() Numérico)
+    subrotina concatArray(CR v1(), v2(), v3() Numérico)
         Declare i,j,c Numérico
         c := 0
         j := 1
@@ -44,7 +44,7 @@ Algoritmo
             fim_se
             j := j + 1
         fim_para
-    fim_procedimento
+    fim_subrotina
 
     scanArray(v1)
     scanArray(v2)

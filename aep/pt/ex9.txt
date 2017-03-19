@@ -1,0 +1,64 @@
+Algoritmo
+    Tipo Character = Registro
+                        name, type Literal
+                        force, agility, intelligence, armor, HP, MP Numérico
+                     Registro
+    
+    Declare character(10) Character
+    
+    subrotina getCharacters(CR character() Character)
+        Declare i Numérico
+        para i de 1 até 10 faça
+            Escreva "Personagem [", i, "]: "
+            Escreva "Nome: "
+            Leia character(i).name 
+            Escreva "Força: "
+            Leia character(i).force
+            Escreva "Agilidade: "
+            Leia character(i).agility
+            Escreva "Inteligencia: "
+            Leia character(i).intelligence
+        fim_para
+    fim_subrotina 
+
+    subrotina calculateStatusCharacter(CR character() Character)
+        Declare i Numérico
+        para i de 1 até 10 faça 
+            se character(i).force > character(i).agility então
+                se character(i).force > character(i).intelligence então
+                    character(i).type = "força"
+                    senão
+                    character(i).type = "Inteligencia"
+                fim_se
+                senão 
+                    se character(i).agility > character(i).intelligence então
+                        character(i).type = "Agilidade"
+                        senão 
+                        character(i).type = "Inteligencia"
+                    fim_se
+            fim_se
+            character(i).armor = character(i).agility * 0.5
+            character(i).HP = character(i).force * 20
+            character(i).MP = character(i).intelligence * 40
+        fim_para
+    fim_subrotina
+
+    subrotina showCharacters(character() Character)
+        Declare i Numérico
+        para i de 1 até 10 faça
+            Escreva "Nome: ", character(i).name
+            Escreva "Tipo: ", character(i).type
+            Escreva "Armadura: ", character(i).armor
+            Escreva "Força: ", character(i).force
+            Escreva "Agilidade: ", character(i).agility
+            Escreva "Inteligencia: ", character(i).intelligence
+            Escreva "Vida: ", character(i).HP
+            Escreva "Mana: ", character(i).MP
+        fim_para
+    fim_subrotina
+    
+    getCharacters(character)
+    calculateStatusCharacter(character)
+    showCharacters(character)
+
+fim_Algoritmo

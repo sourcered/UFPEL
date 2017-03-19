@@ -1,0 +1,78 @@
+Algoritmo
+    Tipo Carro = Registro
+                    model, maker Literal
+                    year, price Numérico
+                 fim_Registro
+    
+    Declare totalCars Numérico
+    
+    Declare carro(10) Carro
+
+    subrotina registerCars(CR carro() Carro)
+        Declare op, index Numérico
+        Declare maker Literal
+        op := 1
+        index := 1
+        Enquanto op <> 0 faça
+            leia op
+            se op = 1 então
+                Escreva "Modelo: "
+                Leia carro(index).model 
+                Escreva "Fabricante: "
+                Leia carro(index).maker 
+                Escreva "Ano: "
+                Leia carro(index).year 
+                Escreva "Preco: "
+                Leia carro(index).price
+                index := index + 1 
+            fim_se
+        fim_enquanto
+    fim_subrotina
+    
+    função Numérico userInterface()
+        Declare op Numérico
+        Escreva "1. Verificar um modelo 0.Sair"
+        Leia op
+        Retorna op
+    fim_função
+
+    função Numérico verifyModel(carro() Carro; model Literal)
+        Declare i Numérico
+        para i de 1 até 10 faça
+            se model = carro(i).model então 
+                Retorna i
+            fim_se
+        fim_para
+        Retorna -1
+    fim_função
+
+    subrotina showModel(carro() Carro; modelIndex)
+        Escreva "Modelo: ", carro(modelIndex).model
+        Escreva "Fabricante: ", carro(modelIndex).maker
+        Escreva "Ano: ", carro(modelIndex).year
+        Escreva "Preco: ", carro(modelIndex).price
+    fim_subrotina
+
+    subrotina getModelFromUser(carro() Carro)
+        Declare op, modelIndex Numérico
+        Declare model Literal
+        op := 1
+        Enquanto op <> 0 faça 
+            op = userInterface()
+            se op = 1 então 
+                Escreva "Modelo: "
+                Leia model
+                modelIndex = verifyModel(carro, model)
+                se modelIndex <> -1 então
+                    showModel(carro, modelIndex)
+                    senão 
+                        Escreva "Este modelo não existe"
+                fim_se
+            fim_se
+        fim_enquanto 
+    fim_subrotina
+
+    registerCars(carro)
+    getModelFromUser(carro)
+
+fim_Algoritmo

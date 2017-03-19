@@ -102,12 +102,12 @@ Algoritmo
         Retorna letter
     fim_função
 
-    procedimento changeStr(CR str() Literal)
+    subrotina changeStr(CR str() Literal)
         Declare i Numérico
         para i de 1 até 50 faça
             str(i) := map(str(i))
         fim_para
-    fim_procedimento
+    fim_subrotina
 
     para i de 1 até 50 faça
         Leia str(i)

@@ -2,16 +2,16 @@ Algoritmo
     Declare tests(3), i Numérico
     Declare operation Literal
 
-    procedimento scanTeachersLog(CR tests() Numérico; CR operation Literal)
+    subrotina scanTeachersLog(CR tests() Numérico; CR operation Literal)
         para i de 1 até 3 faça
             Escreva "Test ", i, ": "
             Leia tests(i)
         fim_para
         Escreva "Operation: "
         Leia operation
-    fim_procedimento
+    fim_subrotina
 
-    procedimento makeOperation(tests() Numérico; operation Literal)
+    subrotina makeOperation(tests() Numérico; operation Literal)
         Declare avg Numérico    
         avg := (tests(1) + tests(2) + tests(3)) / 3
         se operation = "A" então
@@ -26,7 +26,7 @@ Algoritmo
                     fim_se
                 fim_se
         fim_se 
-    fim_procedimento
+    fim_subrotina
 
     scanTeachersLog(tests, operation)
     makeOperation(tests, operation)

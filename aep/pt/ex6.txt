@@ -1,14 +1,14 @@
     Algoritmo
         Declare matrix(4,4), row, column Numérico
 
-        procedimento readMatrix(CR matrix(,) Numérico)
+        subrotina readMatrix(CR matrix(,) Numérico)
             Declare i,j Numérico
             para i de 1 até 4 faça
                 para j de 1 até 4 faça
                     Leia matrix(i,j)
                 fim_para
             fim_para
-        fim_procedimento
+        fim_subrotina
 
         função Numérico getNuleRows(matrix(,) Numérico)
             Declare i, j, value, c Numérico

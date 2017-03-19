@@ -6,12 +6,12 @@ Algoritmo
     
     Declare equation Equation
 
-    procedimento printArrayFloat(CR v(), size Numérico)
+    subrotina printArrayFloat(CR v(), size Numérico)
         Declare i Numérico
         para i de 1 até size faça
             Escreva v(i), ' '
         fim_para
-    fim_procedimento
+    fim_subrotina
 
     função Numérico getResult(a,b Numérico; op Literal)               
         se op = "+" então
@@ -28,21 +28,21 @@ Algoritmo
         fim_se
     fim_função
 
-    procedimento getResults(CR equation Equation)
+    subrotina getResults(CR equation Equation)
         Declare i Numérico
         para i de 1 até 10 faça
             equation.result(i) = getResult(equation.a(i), equation.b(i), equation.operands(i))
         fim_para 
-    fim_procedimento
+    fim_subrotina
 
-    procedimento scanValues(CR equation Equation)
+    subrotina scanValues(CR equation Equation)
         Declare i Numérico
         para i de 1 até 10 faça 
             Leia equation.a(i)
             Leia equation.b(i)
             Leia equation.operands(i)
         fim_para
-    fim_procedimento
+    fim_subrotina
 
     scanValues(equation)
     getResults(equation)
