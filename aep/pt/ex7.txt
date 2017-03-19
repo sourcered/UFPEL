@@ -1,0 +1,31 @@
+Algoritmo
+    Declare matrix(5,5), x Numérico
+
+    procedimento readMatrix(matrix(,) Numérico)
+        Declare i, j Numérico
+        para i de 1 até 5 faça
+            para j de 1 até 5 faça
+                Leia matrix(i,j)
+            fim_para  
+        fim_para  
+    fim_procedimento
+
+    função Numérico findValue(matrix(,), x Numérico)
+        Declare i,j Numérico
+        para i de 1 até 5 faça
+            para j de 1 até 5 faça
+                se matrix(i,j) == x então
+                    Escreva i, j
+                    Retorna 0
+                fim_se 
+            fim_para  
+        fim_para  
+        Retorna -1
+    fim_função
+
+    readMatrix(matrix)
+    Leia x
+    se findValue(matrix, x) == -1 então 
+        Escreva "Não encontrado"
+    fim_se
+fim_Algoritmo

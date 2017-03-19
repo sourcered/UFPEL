@@ -1,0 +1,17 @@
+Algoritmo
+    Declare N Numérico
+    
+    função Numérico doubleFat(n Numérico)
+        se n = 1 então 
+            Retorna 1
+            senão se n-1 % 2 <> 0 então 
+                    Retorna n * doubleFat(n-1)
+                    senão
+                        Retorna n * doubleFat(n-2)
+            fim_se
+        fim_se
+    fim_função
+
+    Leia N
+    Escreva doubleFat(N)
+fim_Algoritmo

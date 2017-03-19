@@ -1,0 +1,17 @@
+Algoritmo
+    Declare N Numérico
+    
+    função Numérico tripleFib(n Numérico)
+        se n = 0 então 
+            Retorna 0
+            senão se n = 1 OU n = 2 OU n = 3 então 
+                Retorna 1
+            fim_se
+            senão 
+                Retorna tripleFib(n-1) + tripleFib(n-2) + tripleFib(n-3)
+        fim_se
+    fim_função
+
+    Leia N
+    Escreva tripleFib(N)
+fim_Algoritmo

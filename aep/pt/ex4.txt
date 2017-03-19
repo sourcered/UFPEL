@@ -1,0 +1,122 @@
+Algoritmo 
+    Declare i Numérico
+    Declare str Literal
+
+    função Literal map(letter Literal)
+        se letter = "a" então Retorna "A"
+        fim_se
+        se letter = "b" então Retorna "B"
+        fim_se
+        se letter = "c" então Retorna "C"
+        fim_se
+        se letter = "d" então Retorna "D"
+        fim_se
+        se letter = "e" então Retorna "E"
+        fim_se
+        se letter = "f" então Retorna "F"
+        fim_se
+        se letter = "g" então Retorna "G"
+        fim_se
+        se letter = "h" então Retorna "H"
+        fim_se
+        se letter = "i" então Retorna "I"
+        fim_se
+        se letter = "j" então Retorna "J"
+        fim_se
+        se letter = "k" então Retorna "K"
+        fim_se
+        se letter = "l" então Retorna "L"
+        fim_se
+        se letter = "m" então Retorna "M"
+        fim_se
+        se letter = "n" então Retorna "N"
+        fim_se
+        se letter = "o" então Retorna "O"
+        fim_se
+        se letter = "p" então Retorna "P"
+        fim_se
+        se letter = "q" então Retorna "Q"
+        fim_se
+        se letter = "r" então Retorna "R"
+        fim_se
+        se letter = "s" então Retorna "S"
+        fim_se
+        se letter = "t" então Retorna "T"
+        fim_se
+        se letter = "u" então Retorna "U"
+        fim_se
+        se letter = "v" então Retorna "V"
+        fim_se
+        se letter = "x" então Retorna "X"
+        fim_se
+        se letter = "z" então Retorna "Z"
+        fim_se
+        se letter = "A" então Retorna "a"
+        fim_se
+        se letter = "B" então Retorna "b"
+        fim_se
+        se letter = "C" então Retorna "c"
+        fim_se
+        se letter = "D" então Retorna "d"
+        fim_se
+        se letter = "E" então Retorna "e"
+        fim_se
+        se letter = "F" então Retorna "f"
+        fim_se
+        se letter = "G" então Retorna "g"
+        fim_se
+        se letter = "H" então Retorna "h"
+        fim_se
+        se letter = "I" então Retorna "i"
+        fim_se
+        se letter = "J" então Retorna "j"
+        fim_se
+        se letter = "K" então Retorna "k"
+        fim_se
+        se letter = "L" então Retorna "l"
+        fim_se
+        se letter = "M" então Retorna "m"
+        fim_se
+        se letter = "N" então Retorna "n"
+        fim_se
+        se letter = "O" então Retorna "o"
+        fim_se
+        se letter = "P" então Retorna "p"
+        fim_se
+        se letter = "Q" então Retorna "q"
+        fim_se
+        se letter = "R" então Retorna "r"
+        fim_se
+        se letter = "S" então Retorna "s"
+        fim_se
+        se letter = "T" então Retorna "t"
+        fim_se
+        se letter = "U" então Retorna "u"
+        fim_se
+        se letter = "V" então Retorna "v"
+        fim_se
+        se letter = "X" então Retorna "x"
+        fim_se
+        se letter = "Z" então Retorna "z"
+        fim_se
+        Retorna letter
+    fim_função
+
+    procedimento changeStr(CR str() Literal)
+        Declare i Numérico
+        para i de 1 até 50 faça
+            str(i) := map(str(i))
+        fim_para
+    fim_procedimento
+
+    para i de 1 até 50 faça
+        Leia str(i)
+    fim_para
+
+    changeStr(str)
+
+    para i de 1 até 50 faça
+        Escreva str(i)
+    fim_para
+
+fim_Algoritmo

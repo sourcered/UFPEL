@@ -1,0 +1,22 @@
+Algoritmo
+    Declare matrix(10,10), i, j Numérico
+    
+    procedimento generateMatrix10By10(matrix(,) Numérico)
+        para i de 1 até 10 faça
+            para j de 1 até 10 faça
+                se i = j então 
+                    matrix(i,j) = 3*i*i
+                    senão 
+                        matrix(i,j) = 2*i + 7*j
+                fim_se
+            fim_para
+        fim_para
+    fim_procedimento
+
+    generateMatrix10By10(matrix)
+    para i de 1 até 10 faça
+        para j de 1 até 10 faça
+            Escreva " ", matrix(i,j)
+        fim_para
+    fim_para
+fim_Algoritmo

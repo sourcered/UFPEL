@@ -1,0 +1,10 @@
+Algoritmo
+    Declare temperature Numérico
+
+    função Numérico convert(t Numérico)
+        Retorna t * (9/5) + 32
+    fim_função
+
+    Leia temperature
+    Escreva convert(temperature), " F"
+fim_Algoritmo

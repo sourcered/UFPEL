@@ -1,0 +1,15 @@
+Algoritmo
+    Declare N Numérico
+    
+    função Numérico printAsc(n, i Numérico)
+        se i = n então 
+            Retorna n
+            senão 
+                Escreva i, " "
+                Retorna printAsc(n, i+1)
+        fim_se
+    fim_função
+
+    Leia N
+    Escreva printAsc(N, 0)
+fim_Algoritmo

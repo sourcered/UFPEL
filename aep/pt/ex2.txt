@@ -1,0 +1,59 @@
+Algoritmo
+    Declare v1(10), v2(10), v3(20) Numérico
+    
+    procedimento printArray(array(), size Numérico)
+        Declare i Numérico
+        para i de 1 até size faça
+            Escreva array(i), ' ' 
+        fim_para
+    fim_procedimento
+    
+    procedimento scanArray(CR array() Numérico)
+        Declare i Numérico
+        para i de 1 até 10 faça
+            leia array(i)
+        fim_para 
+    fim_procedimento
+    
+    procedimento sortArrayAsc(CR array() Numérico; size Numérico)
+        Declare i,j, tmp Numérico
+        para i de 1 até size faça
+            para j de i+1 até size faça
+                se array(i) > array(j) então
+                    tmp := array(i)
+                    array(i) := array(j)
+                    array(j) := tmp
+                fim_se
+            fim_para
+        fim_para
+    fim_procedimento
+    
+    procedimento concatArray(CR v1(), v2(), v3() Numérico)
+        Declare i,j,c Numérico
+        c := 0
+        j := 1
+        para i de 1 até 20 faça 
+            se j <= 10 então
+                v3(i) = v1(j)
+                senão
+                    se c <> 0 então 
+                        c := 1
+                        j := 0
+                    fim_se
+                    v3(i) := v2(j)
+            fim_se
+            j := j + 1
+        fim_para
+    fim_procedimento
+
+    scanArray(v1)
+    scanArray(v2)
+    sortArrayAsc(v1, 10)
+    sortArrayAsc(v2, 10)
+    printArray(v1, 10)
+    printArray(v2, 10)
+    concatArray(v1,v2,v3)
+    sortArrayAsc(v3, 20)
+    printArray(v3, 20)
+    
+fim_algoritmo

@@ -1,0 +1,17 @@
+Algoritmo
+    Declare km, l Numérico
+    
+    procedimento itPayToSell(n Numérico)
+        se n < 8 então 
+            Escreva "Venda seu carro"
+            senão se n < 12 então
+                Escreva "Economico"
+                senão
+                    Escreva "Super Economico"
+            fim_se
+        fim_se
+    fim_procedimento
+
+    Leia km, l
+    itPayToSell(km/l)
+fim_Algoritmo

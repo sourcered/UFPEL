@@ -1,0 +1,51 @@
+Algoritmo 
+    Tipo Equation = Registro
+                        a(10), b(10), result(10) Numérico
+                        operands(10) Literal
+                    fim_Registro    
+    
+    Declare equation Equation
+
+    procedimento printArrayFloat(v(), size Numérico)
+        Declare i Numérico
+        para i de 1 até size faça
+            Escreva v(i), ' '
+        fim_para
+    fim_procedimento
+
+    função Numérico getResult(a,b Numérico; op Literal)               
+        se op = "+" então
+            Retorna a + b
+        fim_se
+        se op = "-" então
+            Retorna a - b
+        fim_se
+        se op = "*" então
+            Retorna a * b
+        fim_se
+        se op = "/" então
+            Retorna a / b
+        fim_se
+    fim_função
+
+    procedimento getResults(CR equation Equation)
+        Declare i Numérico
+        para i de 1 até 10 faça
+            equation.result(i) = getResult(equation.a(i), equation.b(i), equation.operands(i))
+        fim_para 
+    fim_procedimento
+
+    procedimento scanValues(CR equation Equation)
+        Declare i Numérico
+        para i de 1 até 10 faça 
+            Leia equation.a(i)
+            Leia equation.b(i)
+            Leia equation.operands(i)
+        fim_para
+    fim_procedimento
+
+    scanValues(equation)
+    getResults(equation)
+    printArrayFloat(equation.result, 10)
+    
+fim_algoritmo

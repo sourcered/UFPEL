@@ -1,0 +1,54 @@
+    Algoritmo
+        Declare matrix(4,4), row, column Numérico
+
+        procedimento readMatrix(matrix(,) Numérico)
+            Declare i,j Numérico
+            para i de 1 até 4 faça
+                para j de 1 até 4 faça
+                    Leia matrix(i,j)
+                fim_para
+            fim_para
+        fim_procedimento
+
+        função Numérico getNuleRows(matrix(,) Numérico)
+            Declare i, j, value, c Numérico
+            value := 0
+            c := 0
+            para i de 1 até 4 faça
+                para j de 1 até 4 faça
+                    se matrix(i,j) = 0 então
+                        c := c + 1
+                    fim_se
+                fim_para
+                se c % 4 = 0 E c <> 0 então
+                    value := value + 1
+                fim_se
+                c := 0
+            fim_para
+            Retorna value
+        fim_função
+
+        função Numérico getNuleColumns(matrix(,) Numérico)
+            Declare i, j, value, c Numérico
+            value := 0
+            c := 0
+            para i de 1 até 4 faça
+                para j de 1 até 4 faça
+                    se matrix(j,i) = 0 então
+                        c := c + 1
+                    fim_se
+                fim_para
+                se c % 4 = 0 E c <> 0 então
+                    value := value + 1
+                fim_se
+                c := 0
+            fim_para
+            Retorna value
+        fim_função
+
+        readMatrix(matrix)
+        row := getNuleRows(matrix)
+        column := getNuleColumns(matrix)
+
+        Escreva row, column
+    fim_algoritmo

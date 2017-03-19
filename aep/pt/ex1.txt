@@ -1,0 +1,31 @@
+Algoritmo
+    Declare v(15), max, min Numérico
+    procedimento swap(CR array() Numérico; i, j Numérico)
+        tmp Numérico
+        tmp := array(i)
+        array(i) := array(j)
+        array(j) := tmp
+    fim_procedimento
+    procedimento scanArray(CR array Numérico)
+        Declare i Numérico
+        para i de 1 até 15 faça
+            Leia array(i)
+        fim_para
+    fim_procedimento
+    procedimento sortArray(CR array Numérico)
+        Declare i,j Numérico
+        para i de 1 até 15 faça
+            para j de 1 até 15 faça
+                se array(i) < array(j) então 
+                    swap(array, i, j)
+                fim_se
+            fim_para
+        fim_para
+    fim_procedimento
+    scanArray(v)
+    sortArray(v)
+    max = array(15)
+    min = array(1)
+    Escreva "Maior: ", max, "Menor: ", min
+fim_algoritmo
+
