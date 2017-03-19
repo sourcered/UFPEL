@@ -1,20 +1,20 @@
 #include "stdio.h"
 
-int doubleFat(const int);
+int printDec(int);
 
 int main()
 {
-  int n;
+    int N;
+    scanf("%d", &N);
+    
+    printf("%d\n", printDec(N));
 
-  scanf("%d", &n);
-
-  printf("%d\n", doubleFat(n));
-
-  return 0;
+    return 0;
 }
 
-int doubleFat(const int n)
+int printDec(int n)
 {
-  if(n == 1) return 1;
-  return n * doubleFat(((n-1)%2 != 0 ? n-1 : n - 2));
+    if(n == 0) return 0;
+    printf("%d ", n);
+    return printDec(n-1);
 }

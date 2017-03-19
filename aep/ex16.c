@@ -1,20 +1,20 @@
 #include "stdio.h"
 
-int printDec(int);
+int printAsc(int, int);
 
 int main()
 {
     int N;
     scanf("%d", &N);
     
-    printf("%d\n", printDec(N));
+    printf("%d\n", printAsc(N, 0));
 
     return 0;
 }
 
-int printDec(int n)
+int printAsc(int n, int i)
 {
-    if(n == 0) return 0;
-    printf("%d ", n);
-    return printDec(n-1);
+    if(i == n) return n;
+    printf("%d ", i);
+    return printAsc(n, i+1);
 }

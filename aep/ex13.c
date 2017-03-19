@@ -1,20 +1,27 @@
 #include "stdio.h"
 
-int fat(const int);
+static inline float calculateKmByL(float km , float l);
+
+static inline void itPayToSell(float n);
 
 int main()
 {
-  int n;
+  float km;
+  float l;
 
-  scanf("%d", &n);
+  scanf("%f %f", &km, &l);
 
-  printf("%d\n", fat(n));
+  itPayToSell(calculateKmByL(km, l));
 
   return 0;
 }
 
-int fat(const int n)
+static inline float calculateKmByL(float km , float l)
 {
-  if(n == 1) return 1;
-  return n * fat(n-1);
+  return km/l;
+}
+
+static inline void itPayToSell(float n)
+{
+  printf("%s\n", (n < 8 ? "Sell you car" : (n < 12 ? "Economic" : "Super Economic")) );
 }

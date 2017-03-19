@@ -1,67 +1,42 @@
 #include "stdio.h"
 #include "stdlib.h"
-#include "string.h"
 
-typedef struct
-{
-  char name[256];
-  char type[25];
-  float force;
-  float agility;
-  float intelligence;
-  float armor;
-  float HP;
-  float MP;
-}Character;
-
-void getCharacters(Character *);
-void showCharacters(Character *);
-void calculateStatusCharacter(Character *);
+#define ROW 10
+#define COLUMN 10
+int ** generateMatrix10by10();
+void printMatrix(int **);
 
 int main()
 {
-  Character * character = malloc(sizeof(Character) * 10);
-
-  getCharacters(character);
-
-  calculateStatusCharacter(character);
-
-  showCharacters(character);
+  int **matrix;
+  
+  matrix = generateMatrix10by10();
+  
+  printMatrix(matrix);
 
   return 0;
 }
 
-void getCharacters(Character * character)
+int ** generateMatrix10by10()
 {
-  for (size_t i = 0; i < 10; i++)
-  {
-    printf("\nName: ");
-    scanf("%s", character[i].name);
-    printf("Force , Agility, Intelligence: ");
-    scanf("%f%f%f", &character[i].force, &character[i].agility, &character[i].intelligence);
-  }
+  int ** matrix;
+  matrix = (int **) malloc(ROW * sizeof(int **));
+  
+  for(size_t i = 0; i < ROW; i++)
+    matrix[i] = (int *) malloc(COLUMN * sizeof(int *));
+  
+  for(size_t i = 0; i < ROW; i++)
+    for(size_t j = 0; j < COLUMN; j++)
+      matrix[i][j] = (i == j ? (3*i*i) : (2*i + 7*j));
+  return matrix;
 }
 
-void showCharacters(Character * character)
+void printMatrix(int ** matrix)
 {
-  for (size_t i = 0; i < 10; i++)
+  for(size_t i = 0; i < ROW; i++)
   {
-    printf("Name: %s\nType: %s\nArmor: %.2f\n", character[i].name, character[i].type, character[i].armor);
-    printf("Force: %.2f\nAgility: %.2f\nIntelligence: %.2f\n", character[i].force, character[i].agility, character[i].intelligence);
-    printf("HP: %.2f\nMP: %.2f\n\n", character[i].HP, character[i].MP);
-  }
-}
-
-void calculateStatusCharacter(Character * character)
-{
-  printf("#--------------------#\n");
-  for (size_t i = 0; i < 10; i++)
-  {
-    strcpy(character[i].type, (character[i].force > character[i].agility ? (character[i].force > character[i].intelligence ?
-                        "force" : (character[i].agility > character[i].intelligence ? "agility" : "intelligence") ) :
-                        (character[i].agility > character[i].intelligence ? "agility" : "intelligence") ));
-    character[i].armor = character[i].agility * 0.5f;
-    character[i].HP = character[i].force * 20.0f;
-    character[i].MP = character[i].intelligence * 40.0f;
+    for(size_t j = 0; j < COLUMN; j++)
+      printf("%s%d ", (matrix[i][j] < 10 ? "  " : matrix[i][j] < 100 ? " " : "\0"), matrix[i][j]);  //Melhora a visualizacao da matriz e mostra valor
+    printf("\n");
   }
 }

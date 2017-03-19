@@ -1,27 +1,38 @@
 #include "stdio.h"
 
-static inline float calculateKmByL(float km , float l);
+#define f(i) for(int i = 0; i < 3; i++)
 
-static inline void itPayToSell(float n);
+void scanTeachersLog(float [3], char *);
 
-int main()
+void makeOperation(float [3], char *);
+
+int main(int argc, char const *argv[])
 {
-  float km;
-  float l;
+  float tests[3];
+  char operation;
 
-  scanf("%f %f", &km, &l);
+  scanTeachersLog(tests, &operation);
 
-  itPayToSell(calculateKmByL(km, l));
+  makeOperation(tests, &operation);
 
   return 0;
 }
 
-static inline float calculateKmByL(float km , float l)
+void scanTeachersLog(float tests[3], char * operation)
 {
-  return km/l;
+  f(i)
+  {
+    printf("Test %d: ", i);
+    scanf("%f", &tests[i]);
+  }
+  printf("Operation: ");
+  getchar();
+  scanf("%c", operation);
 }
 
-static inline void itPayToSell(float n)
+void makeOperation(float tests[3], char * operation)
 {
-  printf("%s\n", (n < 8 ? "Sell you car" : (n < 14 ? "Economic" : "Super Economic")) );
+  float avg = (tests[0] + tests[1] + tests[2])/3;
+  if(*operation == 'A') printf("AVG: %.2f\n", avg);
+  else                  printf("%s\n", (avg < 4 ? "Fail" : (avg < 7 ? "Exam" : "Approved")));
 }
