@@ -14,7 +14,7 @@ Algoritmo
         Declare i,j Numérico
         para i de 1 até 5 faça
             para j de 1 até 5 faça
-                se matrix(i,j) == x então
+                se matrix(i,j) = x então
                     Escreva i, j
                     Retorna 0
                 fim_se 
@@ -25,7 +25,7 @@ Algoritmo
 
     readMatrix(matrix)
     Leia x
-    se findValue(matrix, x) == -1 então 
+    se findValue(matrix, x) = -1 então 
         Escreva "Não encontrado"
     fim_se
 fim_Algoritmo

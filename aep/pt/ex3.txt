@@ -31,7 +31,7 @@ Algoritmo
     subrotina getResults(CR equation Equation)
         Declare i Numérico
         para i de 1 até 10 faça
-            equation.result(i) = getResult(equation.a(i), equation.b(i), equation.operands(i))
+            equation.result(i) := getResult(equation.a(i), equation.b(i), equation.operands(i))
         fim_para 
     fim_subrotina
 

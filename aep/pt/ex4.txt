@@ -1,6 +1,6 @@
 Algoritmo 
     Declare i Numérico
-    Declare str Literal
+    Declare str() Literal
 
     função Literal map(letter Literal)
         se letter = "a" então Retorna "A"

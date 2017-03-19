@@ -58,11 +58,11 @@ Algoritmo
         Declare model Literal
         op := 1
         Enquanto op <> 0 faça 
-            op = userInterface()
+            op := userInterface()
             se op = 1 então 
                 Escreva "Modelo: "
                 Leia model
-                modelIndex = verifyModel(carro, model)
+                modelIndex := verifyModel(carro, model)
                 se modelIndex <> -1 então
                     showModel(carro, modelIndex)
                     senão 

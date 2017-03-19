@@ -26,20 +26,20 @@ Algoritmo
         para i de 1 até 10 faça 
             se character(i).force > character(i).agility então
                 se character(i).force > character(i).intelligence então
-                    character(i).type = "força"
+                    character(i).type := "força"
                     senão
-                    character(i).type = "Inteligencia"
+                    character(i).type := "Inteligencia"
                 fim_se
                 senão 
                     se character(i).agility > character(i).intelligence então
-                        character(i).type = "Agilidade"
+                        character(i).type := "Agilidade"
                         senão 
-                        character(i).type = "Inteligencia"
+                        character(i).type := "Inteligencia"
                     fim_se
             fim_se
-            character(i).armor = character(i).agility * 0.5
-            character(i).HP = character(i).force * 20
-            character(i).MP = character(i).intelligence * 40
+            character(i).armor := character(i).agility * 0.5
+            character(i).HP := character(i).force * 20
+            character(i).MP := character(i).intelligence * 40
         fim_para
     fim_subrotina
 

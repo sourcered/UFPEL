@@ -34,7 +34,7 @@ Algoritmo
         j := 1
         para i de 1 até 20 faça 
             se j <= 10 então
-                v3(i) = v1(j)
+                v3(i) := v1(j)
                 senão
                     se c <> 0 então 
                         c := 1
@@ -48,10 +48,13 @@ Algoritmo
 
     scanArray(v1)
     scanArray(v2)
+
     sortArrayAsc(v1, 10)
     sortArrayAsc(v2, 10)
+
     printArray(v1, 10)
     printArray(v2, 10)
+    
     concatArray(v1,v2,v3)
     sortArrayAsc(v3, 20)
     printArray(v3, 20)
