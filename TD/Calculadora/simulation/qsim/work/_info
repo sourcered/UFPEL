@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Igor\Documents\Git\trabalho_calculadora\Calculadora\simulation\qsim
+vcalculadora
+Z1 !s100 [hCQVlZeg3MR0RM:zX>ho2
+Z2 IZ4:kc>6;FbkN^jkGZ_IZm3
+Z3 VI2l5nEIT^nhl?kDJYL=kE0
+Z4 dC:\Users\Maiara\Desktop\trabalho_calculadora-master\Calculadora\simulation\qsim
+Z5 w1498781168
+Z6 8calculadora.vo
+Z7 Fcalculadora.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|calculadora.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1498781169.238000
+Z12 !s107 calculadora.vo|
+!s101 -O0
+vcalculadora_vlg_check_tst
+!i10b 1
+Z13 !s100 ogKhWB?H;UWhYnhH73g^>0
+Z14 I]ICj6k8o;Q4KagklcH?c;0
+Z15 V[GJaSf8h5j^AJz7M2Ca]>2
+R4
+Z16 w1498781167
+Z17 8calculadora.vt
+Z18 Fcalculadora.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z19 !s108 1498781169.458000
+Z20 !s107 calculadora.vt|
+Z21 !s90 -work|work|calculadora.vt|
+!s101 -O0
+R10
+vcalculadora_vlg_sample_tst
+!i10b 1
+Z22 !s100 gh9GgVAi>XTfnz01Z2P[^0
+Z23 IBPL]PU8oA<U?<GceTVO5`1
+Z24 VQ9M5eJ`=hiJdWbi<U7cBD1
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vcalculadora_vlg_vec_tst
+!i10b 1
+Z25 !s100 C6VhDnY?zGUeTzldg]1YA1
+Z26 I_aj7PKPo52eLU=J`J0C0>2
+Z27 V7e6::2V0=KmA]@S8K<zNJ3
+R4
+R16
+R17
+R18
+Z28 L0 640
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

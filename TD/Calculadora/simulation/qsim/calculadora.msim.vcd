@@ -1,0 +1,323 @@
+$comment
+	File created using the following command:
+		vcd file calculadora.msim.vcd -direction
+$end
+$date
+	Thu Jun 29 21:06:09 2017
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module calculadora_vlg_vec_tst $end
+$var reg 4 ! A [3:0] $end
+$var reg 4 " B [3:0] $end
+$var reg 1 # C_IN $end
+$var reg 2 $ SEL [1:0] $end
+$var wire 1 % LED_0 [6] $end
+$var wire 1 & LED_0 [5] $end
+$var wire 1 ' LED_0 [4] $end
+$var wire 1 ( LED_0 [3] $end
+$var wire 1 ) LED_0 [2] $end
+$var wire 1 * LED_0 [1] $end
+$var wire 1 + LED_0 [0] $end
+$var wire 1 , LED_1 [6] $end
+$var wire 1 - LED_1 [5] $end
+$var wire 1 . LED_1 [4] $end
+$var wire 1 / LED_1 [3] $end
+$var wire 1 0 LED_1 [2] $end
+$var wire 1 1 LED_1 [1] $end
+$var wire 1 2 LED_1 [0] $end
+$var wire 1 3 N $end
+$var wire 1 4 RESULTADO [3] $end
+$var wire 1 5 RESULTADO [2] $end
+$var wire 1 6 RESULTADO [1] $end
+$var wire 1 7 RESULTADO [0] $end
+$var wire 1 8 RESULTADO_ABS [3] $end
+$var wire 1 9 RESULTADO_ABS [2] $end
+$var wire 1 : RESULTADO_ABS [1] $end
+$var wire 1 ; RESULTADO_ABS [0] $end
+$var wire 1 < V $end
+$var wire 1 = Z $end
+$var wire 1 > sampler $end
+$scope module i1 $end
+$var wire 1 ? gnd $end
+$var wire 1 @ vcc $end
+$var wire 1 A unknown $end
+$var tri1 1 B devclrn $end
+$var tri1 1 C devpor $end
+$var tri1 1 D devoe $end
+$var wire 1 E instancia_somador|SomC0|Meio1|Cout~combout $end
+$var wire 1 F instancia_mux_overflow|Mux0~0_combout $end
+$var wire 1 G RESULTADO[0]~output_o $end
+$var wire 1 H RESULTADO[1]~output_o $end
+$var wire 1 I RESULTADO[2]~output_o $end
+$var wire 1 J RESULTADO[3]~output_o $end
+$var wire 1 K RESULTADO_ABS[0]~output_o $end
+$var wire 1 L RESULTADO_ABS[1]~output_o $end
+$var wire 1 M RESULTADO_ABS[2]~output_o $end
+$var wire 1 N RESULTADO_ABS[3]~output_o $end
+$var wire 1 O V~output_o $end
+$var wire 1 P N~output_o $end
+$var wire 1 Q Z~output_o $end
+$var wire 1 R LED_0[0]~output_o $end
+$var wire 1 S LED_0[1]~output_o $end
+$var wire 1 T LED_0[2]~output_o $end
+$var wire 1 U LED_0[3]~output_o $end
+$var wire 1 V LED_0[4]~output_o $end
+$var wire 1 W LED_0[5]~output_o $end
+$var wire 1 X LED_0[6]~output_o $end
+$var wire 1 Y LED_1[0]~output_o $end
+$var wire 1 Z LED_1[1]~output_o $end
+$var wire 1 [ LED_1[2]~output_o $end
+$var wire 1 \ LED_1[3]~output_o $end
+$var wire 1 ] LED_1[4]~output_o $end
+$var wire 1 ^ LED_1[5]~output_o $end
+$var wire 1 _ LED_1[6]~output_o $end
+$var wire 1 ` SEL[0]~input_o $end
+$var wire 1 a A[1]~input_o $end
+$var wire 1 b SEL[1]~input_o $end
+$var wire 1 c B[1]~input_o $end
+$var wire 1 d Mux1~0_combout $end
+$var wire 1 e B[0]~input_o $end
+$var wire 1 f Mux3~0_combout $end
+$var wire 1 g Mux3~1_combout $end
+$var wire 1 h B[2]~input_o $end
+$var wire 1 i C_IN~input_o $end
+$var wire 1 j Mux2~0_combout $end
+$var wire 1 k A[0]~input_o $end
+$var wire 1 l A[2]~input_o $end
+$var wire 1 m Mux2~1_combout $end
+$var wire 1 n instancia_somador|comb~0_combout $end
+$var wire 1 o instancia_somador|SomC0|Meio2|Cout~combout $end
+$var wire 1 p instancia_somador|SomC1|Meio2|Sum~combout $end
+$var wire 1 q Mux2~2_combout $end
+$var wire 1 r instancia_somador|SomC1|c_out~0_combout $end
+$var wire 1 s instancia_somador|SomC2|Meio2|Sum~0_combout $end
+$var wire 1 t Mux1~1_combout $end
+$var wire 1 u B[3]~input_o $end
+$var wire 1 v instancia_somador|SomC3|Meio2|Sum~0_combout $end
+$var wire 1 w instancia_somador|SomC2|c_out~0_combout $end
+$var wire 1 x Mux0~0_combout $end
+$var wire 1 y instancia_abs_n|Mux1~0_combout $end
+$var wire 1 z instancia_abs_n|Mux0~0_combout $end
+$var wire 1 { A[3]~input_o $end
+$var wire 1 | instancia_somador|SomC3|c_out~0_combout $end
+$var wire 1 } instancia_mux_overflow|Mux0~1_combout $end
+$var wire 1 ~ instancia_mux_overflow|Mux0~2_combout $end
+$var wire 1 !! instancia_mux_overflow|Mux0~3_combout $end
+$var wire 1 "! instancia_mux_zero|Equal1~4_combout $end
+$var wire 1 #! instancia_mux_overflow_para_display|SAIDA_0[0]~0_combout $end
+$var wire 1 $! instancia_mux_overflow_para_display|SAIDA_1[0]~0_combout $end
+$var wire 1 %! instancia_mux_overflow_para_display|SAIDA_1[1]~1_combout $end
+$var wire 1 &! instancia_mux_overflow_para_display|SAIDA_1[2]~2_combout $end
+$var wire 1 '! instancia_mux_overflow_para_display|SAIDA_1[3]~3_combout $end
+$var wire 1 (! instancia_mux_overflow_para_display|SAIDA_1[4]~4_combout $end
+$var wire 1 )! instancia_mux_overflow_para_display|SAIDA_1[5]~5_combout $end
+$var wire 1 *! instancia_mux_overflow_para_display|SAIDA_1[6]~6_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1 !
+b1 "
+0#
+b10 $
+1+
+0*
+0)
+0(
+0'
+0&
+0%
+02
+11
+00
+0/
+1.
+0-
+0,
+03
+07
+16
+05
+04
+0;
+1:
+09
+08
+0<
+0=
+x>
+0?
+1@
+xA
+1B
+1C
+1D
+1E
+0F
+0G
+1H
+0I
+0J
+0K
+1L
+0M
+0N
+0O
+0P
+0Q
+1R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+1Z
+0[
+0\
+1]
+0^
+0_
+0`
+0a
+1b
+0c
+0d
+1e
+0f
+0g
+0h
+0i
+0j
+1k
+0l
+1m
+0n
+0o
+1p
+1q
+0r
+0s
+0t
+0u
+0v
+0w
+0x
+1y
+0z
+0{
+0|
+0}
+0~
+0!!
+0"!
+0#!
+0$!
+1%!
+0&!
+0'!
+1(!
+0)!
+0*!
+$end
+#200000
+b11 "
+b10 "
+0e
+1c
+0>
+0E
+1n
+#400000
+b11 !
+b10 !
+b11 "
+1e
+0k
+1a
+1>
+0m
+1r
+0p
+1d
+1s
+0q
+1t
+0H
+1I
+06
+15
+1z
+0y
+1M
+0L
+19
+0:
+1*!
+0(!
+1'!
+1&!
+0%!
+1_
+0]
+1\
+1[
+0Z
+1,
+0.
+1/
+10
+01
+#600000
+b111 "
+b101 "
+b100 "
+0e
+0c
+1h
+0>
+0n
+1w
+0s
+0r
+1p
+0w
+1s
+#800000
+b11 !
+b101 "
+1e
+1k
+1>
+1E
+1m
+1r
+0p
+1q
+1w
+0s
+1H
+16
+1y
+1L
+1:
+0*!
+1)!
+0'!
+0&!
+0_
+1^
+0\
+0[
+0,
+1-
+0/
+00
+#1000000
