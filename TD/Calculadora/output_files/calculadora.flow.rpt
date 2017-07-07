@@ -1,6 +1,6 @@
 Flow report for calculadora
-Fri Jun 30 00:52:49 2017
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Fri Jul  7 19:35:46 2017
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -40,8 +40,8 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Fri Jun 30 00:52:49 2017           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Flow Status                        ; Successful - Fri Jul  7 19:35:46 2017           ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; calculadora                                     ;
 ; Top-level Entity Name              ; calculadora                                     ;
 ; Family                             ; Cyclone II                                      ;
@@ -64,28 +64,28 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/30/2017 00:52:34 ;
+; Start date & time ; 07/07/2017 19:32:52 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; calculadora         ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                     ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 158515247046832.149879475303360 ; --            ; --          ; --             ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                              ; --            ; --          ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>        ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --             ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
++----------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                               ;
++-------------------------------------+---------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                     ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 0.149946677102138         ; --            ; --          ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                        ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl               ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog) ; <None>        ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                        ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                         ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                  ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING     ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                    ; --            ; --          ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files              ; --            ; --          ; --             ;
++-------------------------------------+---------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -93,26 +93,30 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 528 MB              ; 00:00:02                           ;
-; Fitter                    ; 00:00:06     ; 1.0                     ; 769 MB              ; 00:00:05                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 451 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 426 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 397 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:12     ; --                      ; --                  ; 00:00:11                           ;
+; Analysis & Synthesis      ; 00:00:06     ; 1.0                     ; 362 MB              ; 00:00:05                           ;
+; Fitter                    ; 00:00:18     ; 1.0                     ; 473 MB              ; 00:00:16                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 338 MB              ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 296 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 313 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 317 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 317 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:37     ; --                      ; --                  ; 00:00:35                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-H6INM9N  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; DESKTOP-H6INM9N  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; DESKTOP-H6INM9N  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-H6INM9N  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-H6INM9N  ; Windows 7 ; 6.2        ; x86_64         ;
-+---------------------------+------------------+-----------+------------+----------------+
++-------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                 ;
++---------------------------+------------------+----------------+----------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name        ; OS Version     ; Processor type ;
++---------------------------+------------------+----------------+----------------+----------------+
+; Analysis & Synthesis      ; igor             ; Antergos Linux ; Antergos Linux ; x86_64         ;
+; Fitter                    ; igor             ; Antergos Linux ; Antergos Linux ; x86_64         ;
+; Assembler                 ; igor             ; Antergos Linux ; Antergos Linux ; x86_64         ;
+; TimeQuest Timing Analyzer ; igor             ; Antergos Linux ; Antergos Linux ; x86_64         ;
+; EDA Netlist Writer        ; igor             ; Antergos Linux ; Antergos Linux ; x86_64         ;
+; EDA Netlist Writer        ; igor             ; Antergos Linux ; Antergos Linux ; x86_64         ;
+; EDA Netlist Writer        ; igor             ; Antergos Linux ; Antergos Linux ; x86_64         ;
++---------------------------+------------------+----------------+----------------+----------------+
 
 
 ------------
@@ -123,6 +127,8 @@ quartus_fit --read_settings_files=off --write_settings_files=off calculadora -c 
 quartus_asm --read_settings_files=off --write_settings_files=off calculadora -c calculadora
 quartus_sta calculadora -c calculadora
 quartus_eda --read_settings_files=off --write_settings_files=off calculadora -c calculadora
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog calculadora -c calculadora --vector_source=/home/lemon/Documents/Github/UFPEL/TD/Calculadora/formas_de_onda.vwf --testbench_file=./simulation/qsim/calculadora.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog calculadora -c calculadora
 
 
 

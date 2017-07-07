@@ -1,6 +1,6 @@
 Analysis & Synthesis report for calculadora
-Fri Jun 30 00:52:35 2017
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Fri Jul  7 19:32:58 2017
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -41,8 +41,8 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun 30 00:52:35 2017           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Successful - Fri Jul  7 19:32:58 2017           ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; calculadora                                     ;
 ; Top-level Entity Name              ; calculadora                                     ;
 ; Family                             ; Cyclone II                                      ;
@@ -154,24 +154,23 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                            ;
-+----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                               ; Library ;
-+----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------------------------+---------+
-; calculadora.vhd                  ; yes             ; User VHDL File        ; C:/Users/Igor/Documents/Git/trabalho_calculadora/Calculadora/calculadora.vhd               ;         ;
-; multiplicador.vhd                ; yes             ; User VHDL File        ; C:/Users/Igor/Documents/Git/trabalho_calculadora/Calculadora/multiplicador.vhd             ;         ;
-; divisor.vhd                      ; yes             ; User VHDL File        ; C:/Users/Igor/Documents/Git/trabalho_calculadora/Calculadora/divisor.vhd                   ;         ;
-; mux_overflow_para_display.vhd    ; yes             ; User VHDL File        ; C:/Users/Igor/Documents/Git/trabalho_calculadora/Calculadora/mux_overflow_para_display.vhd ;         ;
-; mux.vhd                          ; yes             ; Auto-Found VHDL File  ; C:/Users/Igor/Documents/Git/trabalho_calculadora/Calculadora/mux.vhd                       ;         ;
-; ssp.vhd                          ; yes             ; Auto-Found VHDL File  ; C:/Users/Igor/Documents/Git/trabalho_calculadora/Calculadora/ssp.vhd                       ;         ;
-; somadorcompleto.vhd              ; yes             ; Auto-Found VHDL File  ; C:/Users/Igor/Documents/Git/trabalho_calculadora/Calculadora/somadorcompleto.vhd           ;         ;
-; meiosomador.vhd                  ; yes             ; Auto-Found VHDL File  ; C:/Users/Igor/Documents/Git/trabalho_calculadora/Calculadora/meiosomador.vhd               ;         ;
-; mux_over.vhd                     ; yes             ; Auto-Found VHDL File  ; C:/Users/Igor/Documents/Git/trabalho_calculadora/Calculadora/mux_over.vhd                  ;         ;
-; mapeador_n.vhd                   ; yes             ; Auto-Found VHDL File  ; C:/Users/Igor/Documents/Git/trabalho_calculadora/Calculadora/mapeador_n.vhd                ;         ;
-; conv.vhd                         ; yes             ; Auto-Found VHDL File  ; C:/Users/Igor/Documents/Git/trabalho_calculadora/Calculadora/conv.vhd                      ;         ;
-; mux_zero.vhd                     ; yes             ; Auto-Found VHDL File  ; C:/Users/Igor/Documents/Git/trabalho_calculadora/Calculadora/mux_zero.vhd                  ;         ;
-+----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------+---------+
+; calculadora.vhd                  ; yes             ; User VHDL File        ; /home/lemon/Documents/Github/UFPEL/TD/Calculadora/calculadora.vhd               ;         ;
+; multiplicador.vhd                ; yes             ; User VHDL File        ; /home/lemon/Documents/Github/UFPEL/TD/Calculadora/multiplicador.vhd             ;         ;
+; divisor.vhd                      ; yes             ; User VHDL File        ; /home/lemon/Documents/Github/UFPEL/TD/Calculadora/divisor.vhd                   ;         ;
+; mux_overflow_para_display.vhd    ; yes             ; User VHDL File        ; /home/lemon/Documents/Github/UFPEL/TD/Calculadora/mux_overflow_para_display.vhd ;         ;
+; mux.vhd                          ; yes             ; Auto-Found VHDL File  ; /home/lemon/Documents/Github/UFPEL/TD/Calculadora/mux.vhd                       ;         ;
+; somador.vhd                      ; yes             ; Auto-Found VHDL File  ; /home/lemon/Documents/Github/UFPEL/TD/Calculadora/somador.vhd                   ;         ;
+; c_adder.vhd                      ; yes             ; Auto-Found VHDL File  ; /home/lemon/Documents/Github/UFPEL/TD/Calculadora/c_adder.vhd                   ;         ;
+; mux_over.vhd                     ; yes             ; Auto-Found VHDL File  ; /home/lemon/Documents/Github/UFPEL/TD/Calculadora/mux_over.vhd                  ;         ;
+; mapeador_n.vhd                   ; yes             ; Auto-Found VHDL File  ; /home/lemon/Documents/Github/UFPEL/TD/Calculadora/mapeador_n.vhd                ;         ;
+; conv.vhd                         ; yes             ; Auto-Found VHDL File  ; /home/lemon/Documents/Github/UFPEL/TD/Calculadora/conv.vhd                      ;         ;
+; mux_zero.vhd                     ; yes             ; Auto-Found VHDL File  ; /home/lemon/Documents/Github/UFPEL/TD/Calculadora/mux_zero.vhd                  ;         ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------+
@@ -184,8 +183,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Total combinational functions               ; 32     ;
 ; Logic element usage by number of LUT inputs ;        ;
 ;     -- 4 input functions                    ; 21     ;
-;     -- 3 input functions                    ; 8      ;
-;     -- <=2 input functions                  ; 3      ;
+;     -- 3 input functions                    ; 7      ;
+;     -- <=2 input functions                  ; 4      ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
 ;     -- normal mode                          ; 32     ;
@@ -199,8 +198,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0      ;
 ; Maximum fan-out node                        ; SEL[0] ;
 ; Maximum fan-out                             ; 12     ;
-; Total fan-out                               ; 131    ;
-; Average fan-out                             ; 2.18   ;
+; Total fan-out                               ; 130    ;
+; Average fan-out                             ; 2.17   ;
 +---------------------------------------------+--------+
 
 
@@ -214,16 +213,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |mux_over:instancia_mux_overflow|                               ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mux_over:instancia_mux_overflow                               ; work         ;
 ;    |mux_overflow_para_display:instancia_mux_overflow_para_display| ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mux_overflow_para_display:instancia_mux_overflow_para_display ; work         ;
 ;    |mux_zero:instancia_mux_zero|                                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|mux_zero:instancia_mux_zero                                   ; work         ;
-;    |ssp:instancia_somador|                                         ; 9 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|ssp:instancia_somador                                         ; work         ;
-;       |SomadorCompleto:SomC0|                                      ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|ssp:instancia_somador|SomadorCompleto:SomC0                   ; work         ;
-;          |MeioSomador:Meio1|                                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|ssp:instancia_somador|SomadorCompleto:SomC0|MeioSomador:Meio1 ; work         ;
-;          |MeioSomador:Meio2|                                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|ssp:instancia_somador|SomadorCompleto:SomC0|MeioSomador:Meio2 ; work         ;
-;       |SomadorCompleto:SomC1|                                      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|ssp:instancia_somador|SomadorCompleto:SomC1                   ; work         ;
-;          |MeioSomador:Meio2|                                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|ssp:instancia_somador|SomadorCompleto:SomC1|MeioSomador:Meio2 ; work         ;
-;       |SomadorCompleto:SomC2|                                      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|ssp:instancia_somador|SomadorCompleto:SomC2                   ; work         ;
-;          |MeioSomador:Meio2|                                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|ssp:instancia_somador|SomadorCompleto:SomC2|MeioSomador:Meio2 ; work         ;
-;       |SomadorCompleto:SomC3|                                      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|ssp:instancia_somador|SomadorCompleto:SomC3                   ; work         ;
-;          |MeioSomador:Meio2|                                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|ssp:instancia_somador|SomadorCompleto:SomC3|MeioSomador:Meio2 ; work         ;
+;    |somador:instancia_somador|                                     ; 9 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|somador:instancia_somador                                     ; work         ;
+;       |c_adder:ca0|                                                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|somador:instancia_somador|c_adder:ca0                         ; work         ;
+;       |c_adder:ca1|                                                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|somador:instancia_somador|c_adder:ca1                         ; work         ;
+;       |c_adder:ca2|                                                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|somador:instancia_somador|c_adder:ca2                         ; work         ;
+;       |c_adder:ca3|                                                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|somador:instancia_somador|c_adder:ca3                         ; work         ;
 +--------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -248,7 +242,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -256,9 +250,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jun 30 00:52:33 2017
+    Info: Processing started: Fri Jul  7 19:32:50 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off calculadora -c calculadora
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file calculadora.vhd
@@ -279,18 +273,14 @@ Warning (12125): Using design file mux.vhd, which is not specified as a design f
     Info (12022): Found design unit 1: mux-arch_mux
     Info (12023): Found entity 1: mux
 Info (12128): Elaborating entity "mux" for hierarchy "mux:instancia_mux_2_para_1"
-Warning (12125): Using design file ssp.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: ssp-arq_ssp
-    Info (12023): Found entity 1: ssp
-Info (12128): Elaborating entity "ssp" for hierarchy "ssp:instancia_somador"
-Warning (12125): Using design file somadorcompleto.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: SomadorCompleto-arq_SomadorCompleto
-    Info (12023): Found entity 1: SomadorCompleto
-Info (12128): Elaborating entity "SomadorCompleto" for hierarchy "ssp:instancia_somador|SomadorCompleto:SomC0"
-Warning (12125): Using design file meiosomador.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: MeioSomador-arq_MeioSomador
-    Info (12023): Found entity 1: MeioSomador
-Info (12128): Elaborating entity "MeioSomador" for hierarchy "ssp:instancia_somador|SomadorCompleto:SomC0|MeioSomador:Meio1"
+Warning (12125): Using design file somador.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: somador-n_somador
+    Info (12023): Found entity 1: somador
+Info (12128): Elaborating entity "somador" for hierarchy "somador:instancia_somador"
+Warning (12125): Using design file c_adder.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: c_adder-n_c_adder
+    Info (12023): Found entity 1: c_adder
+Info (12128): Elaborating entity "c_adder" for hierarchy "somador:instancia_somador|c_adder:ca0"
 Info (12128): Elaborating entity "multiplicador" for hierarchy "multiplicador:instancia_multiplicador"
 Warning (10873): Using initial value X (don't care) for net "RESULTADO_multiplicacao[3]" at multiplicador.vhd(10)
 Info (12128): Elaborating entity "divisor" for hierarchy "divisor:instancia_divisor"
@@ -318,10 +308,10 @@ Info (21057): Implemented 60 device resources after synthesis - the final resour
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 17 output pins
     Info (21061): Implemented 32 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 528 megabytes
-    Info: Processing ended: Fri Jun 30 00:52:35 2017
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 365 megabytes
+    Info: Processing ended: Fri Jul  7 19:32:58 2017
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:06
 
 

@@ -1,35 +1,35 @@
 |calculadora
 A[0] => mux:instancia_mux_2_para_1.A[0]
-A[0] => ssp:instancia_somador.A[0]
-A[0] => ssp:instancia_subtrator.A[0]
+A[0] => somador:instancia_somador.x[0]
+A[0] => somador:instancia_subtrator.x[0]
 A[1] => mux:instancia_mux_2_para_1.A[1]
-A[1] => ssp:instancia_somador.A[1]
-A[1] => ssp:instancia_subtrator.A[1]
+A[1] => somador:instancia_somador.x[1]
+A[1] => somador:instancia_subtrator.x[1]
 A[2] => mux:instancia_mux_2_para_1.A[2]
-A[2] => ssp:instancia_somador.A[2]
-A[2] => ssp:instancia_subtrator.A[2]
+A[2] => somador:instancia_somador.x[2]
+A[2] => somador:instancia_subtrator.x[2]
 A[3] => mux:instancia_mux_2_para_1.A[3]
-A[3] => ssp:instancia_somador.A[3]
-A[3] => ssp:instancia_subtrator.A[3]
+A[3] => somador:instancia_somador.x[3]
+A[3] => somador:instancia_subtrator.x[3]
 B[0] => mux:instancia_mux_2_para_1.B[0]
-B[0] => ssp:instancia_somador.B[0]
-B[0] => ssp:instancia_subtrator.B[0]
+B[0] => somador:instancia_somador.y[0]
+B[0] => somador:instancia_subtrator.y[0]
 B[1] => mux:instancia_mux_2_para_1.B[1]
-B[1] => ssp:instancia_somador.B[1]
-B[1] => ssp:instancia_subtrator.B[1]
+B[1] => somador:instancia_somador.y[1]
+B[1] => somador:instancia_subtrator.y[1]
 B[2] => mux:instancia_mux_2_para_1.B[2]
-B[2] => ssp:instancia_somador.B[2]
-B[2] => ssp:instancia_subtrator.B[2]
+B[2] => somador:instancia_somador.y[2]
+B[2] => somador:instancia_subtrator.y[2]
 B[3] => mux:instancia_mux_2_para_1.B[3]
-B[3] => ssp:instancia_somador.B[3]
-B[3] => ssp:instancia_subtrator.B[3]
+B[3] => somador:instancia_somador.y[3]
+B[3] => somador:instancia_subtrator.y[3]
 C_IN => mux:instancia_mux_2_para_1.CIN
 SEL[0] => Mux0.IN1
 SEL[0] => Mux1.IN1
 SEL[0] => Mux2.IN1
 SEL[0] => Mux3.IN1
-SEL[0] => ssp:instancia_somador.control
-SEL[0] => ssp:instancia_subtrator.control
+SEL[0] => somador:instancia_somador.c_in
+SEL[0] => somador:instancia_subtrator.c_in
 SEL[0] => mux_over:instancia_mux_overflow.SEL[0]
 SEL[1] => Mux0.IN0
 SEL[1] => Mux1.IN0
@@ -56,272 +56,176 @@ LED_1[6] <= mux_overflow_para_display:instancia_mux_overflow_para_display.SAIDA_
 
 
 |calculadora|mux:instancia_mux_2_para_1
-A[0] => SAIDA.DATAA
-A[1] => SAIDA.DATAA
-A[2] => SAIDA.DATAA
-A[3] => SAIDA.DATAA
-B[0] => SAIDA.DATAB
-B[1] => SAIDA.DATAB
-B[2] => SAIDA.DATAB
-B[3] => SAIDA.DATAB
-CIN => SAIDA.OUTPUTSELECT
-CIN => SAIDA.OUTPUTSELECT
-CIN => SAIDA.OUTPUTSELECT
-CIN => SAIDA.OUTPUTSELECT
-SAIDA[0] <= SAIDA.DB_MAX_OUTPUT_PORT_TYPE
-SAIDA[1] <= SAIDA.DB_MAX_OUTPUT_PORT_TYPE
-SAIDA[2] <= SAIDA.DB_MAX_OUTPUT_PORT_TYPE
-SAIDA[3] <= SAIDA.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => SAIDA~3.DATAA
+A[1] => SAIDA~2.DATAA
+A[2] => SAIDA~1.DATAA
+A[3] => SAIDA~0.DATAA
+B[0] => SAIDA~3.DATAB
+B[1] => SAIDA~2.DATAB
+B[2] => SAIDA~1.DATAB
+B[3] => SAIDA~0.DATAB
+CIN => SAIDA~0.OUTPUTSELECT
+CIN => SAIDA~1.OUTPUTSELECT
+CIN => SAIDA~2.OUTPUTSELECT
+CIN => SAIDA~3.OUTPUTSELECT
+SAIDA[0] <= SAIDA~3.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[1] <= SAIDA~2.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[2] <= SAIDA~1.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA[3] <= SAIDA~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calculadora|ssp:instancia_somador
-control => comb.IN0
-control => comb.IN0
-control => comb.IN0
-control => comb.IN0
-control => SomadorCompleto:SomC0.c_in
-A[0] => SomadorCompleto:SomC0.x
-A[1] => SomadorCompleto:SomC1.x
-A[2] => SomadorCompleto:SomC2.x
-A[3] => SomadorCompleto:SomC3.x
-B[0] => comb.IN1
-B[1] => comb.IN1
-B[2] => comb.IN1
-B[3] => comb.IN1
-Soma[0] <= SomadorCompleto:SomC0.S
-Soma[1] <= SomadorCompleto:SomC1.S
-Soma[2] <= SomadorCompleto:SomC2.S
-Soma[3] <= SomadorCompleto:SomC3.S
-overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+|calculadora|somador:instancia_somador
+x[0] => c_adder:ca0.a
+x[1] => c_adder:ca1.a
+x[2] => c_adder:ca2.a
+x[3] => c_adder:ca3.a
+y[0] => comb~0.IN0
+y[1] => comb~1.IN0
+y[2] => comb~2.IN0
+y[3] => comb~3.IN0
+c_in => comb~0.IN1
+c_in => comb~1.IN1
+c_in => comb~2.IN1
+c_in => comb~3.IN1
+c_in => c_adder:ca0.c_in
+overflow <= overflow~0.DB_MAX_OUTPUT_PORT_TYPE
+s[0] <= c_adder:ca0.sum
+s[1] <= c_adder:ca1.sum
+s[2] <= c_adder:ca2.sum
+s[3] <= c_adder:ca3.sum
 
 
-|calculadora|ssp:instancia_somador|SomadorCompleto:SomC0
-x => MeioSomador:Meio1.a
-y => MeioSomador:Meio1.b
-c_in => MeioSomador:Meio2.b
-S <= MeioSomador:Meio2.Sum
-c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+|calculadora|somador:instancia_somador|c_adder:ca0
+a => sum~0.IN0
+a => carry~0.IN0
+a => carry~1.IN0
+b => sum~0.IN1
+b => carry~0.IN1
+b => carry~3.IN0
+c_in => sum~1.IN1
+c_in => carry~1.IN1
+c_in => carry~3.IN1
+sum <= sum~1.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calculadora|ssp:instancia_somador|SomadorCompleto:SomC0|MeioSomador:Meio1
-a => Sum.IN0
-a => Cout.IN0
-b => Sum.IN1
-b => Cout.IN1
-Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+|calculadora|somador:instancia_somador|c_adder:ca1
+a => sum~0.IN0
+a => carry~0.IN0
+a => carry~1.IN0
+b => sum~0.IN1
+b => carry~0.IN1
+b => carry~3.IN0
+c_in => sum~1.IN1
+c_in => carry~1.IN1
+c_in => carry~3.IN1
+sum <= sum~1.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calculadora|ssp:instancia_somador|SomadorCompleto:SomC0|MeioSomador:Meio2
-a => Sum.IN0
-a => Cout.IN0
-b => Sum.IN1
-b => Cout.IN1
-Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+|calculadora|somador:instancia_somador|c_adder:ca2
+a => sum~0.IN0
+a => carry~0.IN0
+a => carry~1.IN0
+b => sum~0.IN1
+b => carry~0.IN1
+b => carry~3.IN0
+c_in => sum~1.IN1
+c_in => carry~1.IN1
+c_in => carry~3.IN1
+sum <= sum~1.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calculadora|ssp:instancia_somador|SomadorCompleto:SomC1
-x => MeioSomador:Meio1.a
-y => MeioSomador:Meio1.b
-c_in => MeioSomador:Meio2.b
-S <= MeioSomador:Meio2.Sum
-c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+|calculadora|somador:instancia_somador|c_adder:ca3
+a => sum~0.IN0
+a => carry~0.IN0
+a => carry~1.IN0
+b => sum~0.IN1
+b => carry~0.IN1
+b => carry~3.IN0
+c_in => sum~1.IN1
+c_in => carry~1.IN1
+c_in => carry~3.IN1
+sum <= sum~1.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calculadora|ssp:instancia_somador|SomadorCompleto:SomC1|MeioSomador:Meio1
-a => Sum.IN0
-a => Cout.IN0
-b => Sum.IN1
-b => Cout.IN1
-Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+|calculadora|somador:instancia_subtrator
+x[0] => c_adder:ca0.a
+x[1] => c_adder:ca1.a
+x[2] => c_adder:ca2.a
+x[3] => c_adder:ca3.a
+y[0] => comb~0.IN0
+y[1] => comb~1.IN0
+y[2] => comb~2.IN0
+y[3] => comb~3.IN0
+c_in => comb~0.IN1
+c_in => comb~1.IN1
+c_in => comb~2.IN1
+c_in => comb~3.IN1
+c_in => c_adder:ca0.c_in
+overflow <= overflow~0.DB_MAX_OUTPUT_PORT_TYPE
+s[0] <= c_adder:ca0.sum
+s[1] <= c_adder:ca1.sum
+s[2] <= c_adder:ca2.sum
+s[3] <= c_adder:ca3.sum
 
 
-|calculadora|ssp:instancia_somador|SomadorCompleto:SomC1|MeioSomador:Meio2
-a => Sum.IN0
-a => Cout.IN0
-b => Sum.IN1
-b => Cout.IN1
-Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+|calculadora|somador:instancia_subtrator|c_adder:ca0
+a => sum~0.IN0
+a => carry~0.IN0
+a => carry~1.IN0
+b => sum~0.IN1
+b => carry~0.IN1
+b => carry~3.IN0
+c_in => sum~1.IN1
+c_in => carry~1.IN1
+c_in => carry~3.IN1
+sum <= sum~1.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calculadora|ssp:instancia_somador|SomadorCompleto:SomC2
-x => MeioSomador:Meio1.a
-y => MeioSomador:Meio1.b
-c_in => MeioSomador:Meio2.b
-S <= MeioSomador:Meio2.Sum
-c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+|calculadora|somador:instancia_subtrator|c_adder:ca1
+a => sum~0.IN0
+a => carry~0.IN0
+a => carry~1.IN0
+b => sum~0.IN1
+b => carry~0.IN1
+b => carry~3.IN0
+c_in => sum~1.IN1
+c_in => carry~1.IN1
+c_in => carry~3.IN1
+sum <= sum~1.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calculadora|ssp:instancia_somador|SomadorCompleto:SomC2|MeioSomador:Meio1
-a => Sum.IN0
-a => Cout.IN0
-b => Sum.IN1
-b => Cout.IN1
-Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+|calculadora|somador:instancia_subtrator|c_adder:ca2
+a => sum~0.IN0
+a => carry~0.IN0
+a => carry~1.IN0
+b => sum~0.IN1
+b => carry~0.IN1
+b => carry~3.IN0
+c_in => sum~1.IN1
+c_in => carry~1.IN1
+c_in => carry~3.IN1
+sum <= sum~1.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|calculadora|ssp:instancia_somador|SomadorCompleto:SomC2|MeioSomador:Meio2
-a => Sum.IN0
-a => Cout.IN0
-b => Sum.IN1
-b => Cout.IN1
-Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calculadora|ssp:instancia_somador|SomadorCompleto:SomC3
-x => MeioSomador:Meio1.a
-y => MeioSomador:Meio1.b
-c_in => MeioSomador:Meio2.b
-S <= MeioSomador:Meio2.Sum
-c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calculadora|ssp:instancia_somador|SomadorCompleto:SomC3|MeioSomador:Meio1
-a => Sum.IN0
-a => Cout.IN0
-b => Sum.IN1
-b => Cout.IN1
-Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calculadora|ssp:instancia_somador|SomadorCompleto:SomC3|MeioSomador:Meio2
-a => Sum.IN0
-a => Cout.IN0
-b => Sum.IN1
-b => Cout.IN1
-Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calculadora|ssp:instancia_subtrator
-control => comb.IN0
-control => comb.IN0
-control => comb.IN0
-control => comb.IN0
-control => SomadorCompleto:SomC0.c_in
-A[0] => SomadorCompleto:SomC0.x
-A[1] => SomadorCompleto:SomC1.x
-A[2] => SomadorCompleto:SomC2.x
-A[3] => SomadorCompleto:SomC3.x
-B[0] => comb.IN1
-B[1] => comb.IN1
-B[2] => comb.IN1
-B[3] => comb.IN1
-Soma[0] <= SomadorCompleto:SomC0.S
-Soma[1] <= SomadorCompleto:SomC1.S
-Soma[2] <= SomadorCompleto:SomC2.S
-Soma[3] <= SomadorCompleto:SomC3.S
-overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calculadora|ssp:instancia_subtrator|SomadorCompleto:SomC0
-x => MeioSomador:Meio1.a
-y => MeioSomador:Meio1.b
-c_in => MeioSomador:Meio2.b
-S <= MeioSomador:Meio2.Sum
-c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calculadora|ssp:instancia_subtrator|SomadorCompleto:SomC0|MeioSomador:Meio1
-a => Sum.IN0
-a => Cout.IN0
-b => Sum.IN1
-b => Cout.IN1
-Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calculadora|ssp:instancia_subtrator|SomadorCompleto:SomC0|MeioSomador:Meio2
-a => Sum.IN0
-a => Cout.IN0
-b => Sum.IN1
-b => Cout.IN1
-Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calculadora|ssp:instancia_subtrator|SomadorCompleto:SomC1
-x => MeioSomador:Meio1.a
-y => MeioSomador:Meio1.b
-c_in => MeioSomador:Meio2.b
-S <= MeioSomador:Meio2.Sum
-c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calculadora|ssp:instancia_subtrator|SomadorCompleto:SomC1|MeioSomador:Meio1
-a => Sum.IN0
-a => Cout.IN0
-b => Sum.IN1
-b => Cout.IN1
-Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calculadora|ssp:instancia_subtrator|SomadorCompleto:SomC1|MeioSomador:Meio2
-a => Sum.IN0
-a => Cout.IN0
-b => Sum.IN1
-b => Cout.IN1
-Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calculadora|ssp:instancia_subtrator|SomadorCompleto:SomC2
-x => MeioSomador:Meio1.a
-y => MeioSomador:Meio1.b
-c_in => MeioSomador:Meio2.b
-S <= MeioSomador:Meio2.Sum
-c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calculadora|ssp:instancia_subtrator|SomadorCompleto:SomC2|MeioSomador:Meio1
-a => Sum.IN0
-a => Cout.IN0
-b => Sum.IN1
-b => Cout.IN1
-Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calculadora|ssp:instancia_subtrator|SomadorCompleto:SomC2|MeioSomador:Meio2
-a => Sum.IN0
-a => Cout.IN0
-b => Sum.IN1
-b => Cout.IN1
-Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calculadora|ssp:instancia_subtrator|SomadorCompleto:SomC3
-x => MeioSomador:Meio1.a
-y => MeioSomador:Meio1.b
-c_in => MeioSomador:Meio2.b
-S <= MeioSomador:Meio2.Sum
-c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calculadora|ssp:instancia_subtrator|SomadorCompleto:SomC3|MeioSomador:Meio1
-a => Sum.IN0
-a => Cout.IN0
-b => Sum.IN1
-b => Cout.IN1
-Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|calculadora|ssp:instancia_subtrator|SomadorCompleto:SomC3|MeioSomador:Meio2
-a => Sum.IN0
-a => Cout.IN0
-b => Sum.IN1
-b => Cout.IN1
-Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+|calculadora|somador:instancia_subtrator|c_adder:ca3
+a => sum~0.IN0
+a => carry~0.IN0
+a => carry~1.IN0
+b => sum~0.IN1
+b => carry~0.IN1
+b => carry~3.IN0
+c_in => sum~1.IN1
+c_in => carry~1.IN1
+c_in => carry~3.IN1
+sum <= sum~1.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |calculadora|multiplicador:instancia_multiplicador
@@ -448,62 +352,62 @@ display1[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |calculadora|mux_overflow_para_display:instancia_mux_overflow_para_display
-ENTRADA_PALAVRA_OVERFLOW[0] => SAIDA_0.DATAA
-ENTRADA_PALAVRA_OVERFLOW[1] => SAIDA_0.DATAA
-ENTRADA_PALAVRA_OVERFLOW[2] => SAIDA_0.DATAA
-ENTRADA_PALAVRA_OVERFLOW[3] => SAIDA_0.DATAA
-ENTRADA_PALAVRA_OVERFLOW[4] => SAIDA_0.DATAA
-ENTRADA_PALAVRA_OVERFLOW[5] => SAIDA_0.DATAA
-ENTRADA_PALAVRA_OVERFLOW[6] => SAIDA_0.DATAA
-ENTRADA_PALAVRA_OVERFLOW_2[0] => SAIDA_1.DATAA
-ENTRADA_PALAVRA_OVERFLOW_2[1] => SAIDA_1.DATAA
-ENTRADA_PALAVRA_OVERFLOW_2[2] => SAIDA_1.DATAA
-ENTRADA_PALAVRA_OVERFLOW_2[3] => SAIDA_1.DATAA
-ENTRADA_PALAVRA_OVERFLOW_2[4] => SAIDA_1.DATAA
-ENTRADA_PALAVRA_OVERFLOW_2[5] => SAIDA_1.DATAA
-ENTRADA_PALAVRA_OVERFLOW_2[6] => SAIDA_1.DATAA
-RESULTADO_PALAVRA_NUMERO[0] => SAIDA_0.DATAB
-RESULTADO_PALAVRA_NUMERO[1] => SAIDA_0.DATAB
-RESULTADO_PALAVRA_NUMERO[2] => SAIDA_0.DATAB
-RESULTADO_PALAVRA_NUMERO[3] => SAIDA_0.DATAB
-RESULTADO_PALAVRA_NUMERO[4] => SAIDA_0.DATAB
-RESULTADO_PALAVRA_NUMERO[5] => SAIDA_0.DATAB
-RESULTADO_PALAVRA_NUMERO[6] => SAIDA_0.DATAB
-RESULTADO_PALAVRA_NUMERO_2[0] => SAIDA_1.DATAB
-RESULTADO_PALAVRA_NUMERO_2[1] => SAIDA_1.DATAB
-RESULTADO_PALAVRA_NUMERO_2[2] => SAIDA_1.DATAB
-RESULTADO_PALAVRA_NUMERO_2[3] => SAIDA_1.DATAB
-RESULTADO_PALAVRA_NUMERO_2[4] => SAIDA_1.DATAB
-RESULTADO_PALAVRA_NUMERO_2[5] => SAIDA_1.DATAB
-RESULTADO_PALAVRA_NUMERO_2[6] => SAIDA_1.DATAB
-OVERFLOW => SAIDA_0.OUTPUTSELECT
-OVERFLOW => SAIDA_0.OUTPUTSELECT
-OVERFLOW => SAIDA_0.OUTPUTSELECT
-OVERFLOW => SAIDA_0.OUTPUTSELECT
-OVERFLOW => SAIDA_0.OUTPUTSELECT
-OVERFLOW => SAIDA_0.OUTPUTSELECT
-OVERFLOW => SAIDA_0.OUTPUTSELECT
-OVERFLOW => SAIDA_1.OUTPUTSELECT
-OVERFLOW => SAIDA_1.OUTPUTSELECT
-OVERFLOW => SAIDA_1.OUTPUTSELECT
-OVERFLOW => SAIDA_1.OUTPUTSELECT
-OVERFLOW => SAIDA_1.OUTPUTSELECT
-OVERFLOW => SAIDA_1.OUTPUTSELECT
-OVERFLOW => SAIDA_1.OUTPUTSELECT
-SAIDA_0[0] <= SAIDA_0.DB_MAX_OUTPUT_PORT_TYPE
-SAIDA_0[1] <= SAIDA_0.DB_MAX_OUTPUT_PORT_TYPE
-SAIDA_0[2] <= SAIDA_0.DB_MAX_OUTPUT_PORT_TYPE
-SAIDA_0[3] <= SAIDA_0.DB_MAX_OUTPUT_PORT_TYPE
-SAIDA_0[4] <= SAIDA_0.DB_MAX_OUTPUT_PORT_TYPE
-SAIDA_0[5] <= SAIDA_0.DB_MAX_OUTPUT_PORT_TYPE
-SAIDA_0[6] <= SAIDA_0.DB_MAX_OUTPUT_PORT_TYPE
-SAIDA_1[0] <= SAIDA_1.DB_MAX_OUTPUT_PORT_TYPE
-SAIDA_1[1] <= SAIDA_1.DB_MAX_OUTPUT_PORT_TYPE
-SAIDA_1[2] <= SAIDA_1.DB_MAX_OUTPUT_PORT_TYPE
-SAIDA_1[3] <= SAIDA_1.DB_MAX_OUTPUT_PORT_TYPE
-SAIDA_1[4] <= SAIDA_1.DB_MAX_OUTPUT_PORT_TYPE
-SAIDA_1[5] <= SAIDA_1.DB_MAX_OUTPUT_PORT_TYPE
-SAIDA_1[6] <= SAIDA_1.DB_MAX_OUTPUT_PORT_TYPE
+ENTRADA_PALAVRA_OVERFLOW[0] => SAIDA_0~6.DATAA
+ENTRADA_PALAVRA_OVERFLOW[1] => SAIDA_0~5.DATAA
+ENTRADA_PALAVRA_OVERFLOW[2] => SAIDA_0~4.DATAA
+ENTRADA_PALAVRA_OVERFLOW[3] => SAIDA_0~3.DATAA
+ENTRADA_PALAVRA_OVERFLOW[4] => SAIDA_0~2.DATAA
+ENTRADA_PALAVRA_OVERFLOW[5] => SAIDA_0~1.DATAA
+ENTRADA_PALAVRA_OVERFLOW[6] => SAIDA_0~0.DATAA
+ENTRADA_PALAVRA_OVERFLOW_2[0] => SAIDA_1~6.DATAA
+ENTRADA_PALAVRA_OVERFLOW_2[1] => SAIDA_1~5.DATAA
+ENTRADA_PALAVRA_OVERFLOW_2[2] => SAIDA_1~4.DATAA
+ENTRADA_PALAVRA_OVERFLOW_2[3] => SAIDA_1~3.DATAA
+ENTRADA_PALAVRA_OVERFLOW_2[4] => SAIDA_1~2.DATAA
+ENTRADA_PALAVRA_OVERFLOW_2[5] => SAIDA_1~1.DATAA
+ENTRADA_PALAVRA_OVERFLOW_2[6] => SAIDA_1~0.DATAA
+RESULTADO_PALAVRA_NUMERO[0] => SAIDA_0~6.DATAB
+RESULTADO_PALAVRA_NUMERO[1] => SAIDA_0~5.DATAB
+RESULTADO_PALAVRA_NUMERO[2] => SAIDA_0~4.DATAB
+RESULTADO_PALAVRA_NUMERO[3] => SAIDA_0~3.DATAB
+RESULTADO_PALAVRA_NUMERO[4] => SAIDA_0~2.DATAB
+RESULTADO_PALAVRA_NUMERO[5] => SAIDA_0~1.DATAB
+RESULTADO_PALAVRA_NUMERO[6] => SAIDA_0~0.DATAB
+RESULTADO_PALAVRA_NUMERO_2[0] => SAIDA_1~6.DATAB
+RESULTADO_PALAVRA_NUMERO_2[1] => SAIDA_1~5.DATAB
+RESULTADO_PALAVRA_NUMERO_2[2] => SAIDA_1~4.DATAB
+RESULTADO_PALAVRA_NUMERO_2[3] => SAIDA_1~3.DATAB
+RESULTADO_PALAVRA_NUMERO_2[4] => SAIDA_1~2.DATAB
+RESULTADO_PALAVRA_NUMERO_2[5] => SAIDA_1~1.DATAB
+RESULTADO_PALAVRA_NUMERO_2[6] => SAIDA_1~0.DATAB
+OVERFLOW => SAIDA_0~0.OUTPUTSELECT
+OVERFLOW => SAIDA_0~1.OUTPUTSELECT
+OVERFLOW => SAIDA_0~2.OUTPUTSELECT
+OVERFLOW => SAIDA_0~3.OUTPUTSELECT
+OVERFLOW => SAIDA_0~4.OUTPUTSELECT
+OVERFLOW => SAIDA_0~5.OUTPUTSELECT
+OVERFLOW => SAIDA_0~6.OUTPUTSELECT
+OVERFLOW => SAIDA_1~0.OUTPUTSELECT
+OVERFLOW => SAIDA_1~1.OUTPUTSELECT
+OVERFLOW => SAIDA_1~2.OUTPUTSELECT
+OVERFLOW => SAIDA_1~3.OUTPUTSELECT
+OVERFLOW => SAIDA_1~4.OUTPUTSELECT
+OVERFLOW => SAIDA_1~5.OUTPUTSELECT
+OVERFLOW => SAIDA_1~6.OUTPUTSELECT
+SAIDA_0[0] <= SAIDA_0~6.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA_0[1] <= SAIDA_0~5.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA_0[2] <= SAIDA_0~4.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA_0[3] <= SAIDA_0~3.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA_0[4] <= SAIDA_0~2.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA_0[5] <= SAIDA_0~1.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA_0[6] <= SAIDA_0~0.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA_1[0] <= SAIDA_1~6.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA_1[1] <= SAIDA_1~5.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA_1[2] <= SAIDA_1~4.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA_1[3] <= SAIDA_1~3.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA_1[4] <= SAIDA_1~2.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA_1[5] <= SAIDA_1~1.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA_1[6] <= SAIDA_1~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |calculadora|mux_zero:instancia_mux_zero
@@ -515,6 +419,6 @@ ENTRADA[2] => Equal0.IN0
 ENTRADA[2] => Equal1.IN1
 ENTRADA[3] => Equal0.IN3
 ENTRADA[3] => Equal1.IN0
-SAIDA <= SAIDA.DB_MAX_OUTPUT_PORT_TYPE
+SAIDA <= SAIDA~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
